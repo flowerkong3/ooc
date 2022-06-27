@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ooc_sub_product</title>
+	<!-- *js -->
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<!-- *Slick.js -->
+	<script src="js/slick/slick.min.js"></script>
+	<link rel="stylesheet" href="js/slick/slick.css">
+	<link rel="stylesheet" href="js/slick/slick-theme.css">
+	<!-- *Sliding jQuery 부드럽게 슬라이딩 되면서 찾아감-->
+	<script src="js/jquery.scrollTo.min.js"></script>
+	<!-- *Custom.js -->
+	<script src="js/custom_index.js"></script> <!-- js common-->
+	<script src="js/sub/custom_sub_product.js"></script> <!-- 제작중 -->
+	<!-- *CSS -->
+	<!-- pc -->
+	<link rel="stylesheet" href="css/sub_product/style_sub_product.css"> <!-- 제작중 -->
+	<!-- 모바일 -->
+	<link rel="stylesheet" href="css/responsive.css"> <!-- common-->
+	<link rel="stylesheet" href="css/sub_product/responsive_sub_product.css"> <!-- 제작중 -->
+
+</head>
+
+<body>
+	<div class="container">
+		<!-- ! Header -->
+		<header>
+			<nav>
+				<!-- *Logo -->
+				<h1>
+					<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+				</h1>
+				<!-- *Lnb -->
+				<ul class="lnb">
+					<li>
+						<a href="sub_brand.html">brand</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="index_sub_brand.html">브랜드스토리</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="sub_product.html">product</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="#none">전체상품</a>
+							</li>
+							<li>
+								<a href="#none">베스트상품</a>
+							</li>
+							<li>
+								<a href="#none">스킨케어</a>
+							</li>
+							<li>
+								<a href="#none">바디케어</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="sub_event.html">event</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="#none">진행중인 이벤트</a>
+							</li>
+							<li>
+								<a href="#none">지난 이벤트</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#none">community</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="#none">공지사항</a>
+							</li>
+							<li>
+								<a href="#none">C/S 센터</a>
+							</li>
+							<li>
+								<a href="#none">FAQ</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- *Gnb -->
+				<div class="gnb">
+					<a href="#none"><img src="images/icon_search.png" alt="icon_search"></a>
+					<a href="#none"><img src="images/icon_login.png" alt="icon_login"></a>
+					<a href="#none"><img src="images/icon_basket.png" alt="icon_basket"></a>
+					<!-- <a href="#none"><i class="fa fa-search"></i></a>
+            <a href="#none"><i class="fa fa-user"></i></a>
+            <a href="#none"><i class="fa fa-shopping-bag"></i></a> -->
+				</div>
+				<!-- *Trigger -->
+				<div class="trigger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</nav>
+			<div class="menu-bg"></div>
+		</header>
+		<!-- ! Section 시작 -->
+		<!-- ! Main 메인 비주얼 -->
+		<section class="section01 prd-main">
+			<div class="inner">
+				<div class="main-content">
+					<!-- left -->
+					<div class="main-left">
+						<div class="circle">
+							<span>1+1</span>
+						</div>
+						<div class="tab-photo">
+							<div class="tab-items tab-green">
+								<img src="images/sub_product/mockup1.png" alt="mockup1">
+							</div>
+							<div class="tab-items tab-orange">
+								<img src="images/sub_product/mockup2.png" alt="mockup2">
+							</div>
+						</div>
+						<div class="btn-photo">
+							<em class="btn-items btn-green">
+								<img src="images/sub_product/mockup1.png" alt="mockup1">
+							</em>
+							<em class="btn-items btn-orange">
+								<img src="images/sub_product/mockup2.png" alt="mockup2">
+							</em>
+						</div>
+					</div>
+					<!-- right -->
+					<div class="main-right">
+						<h2>#클렌징 #보습
+							<span>올리브 오일 클렌져</span>
+						</h2>
+						<ul class="amount">
+							<li>
+								<small>판매가</small>
+								<span>21,000원</span>
+							</li>
+							<li>
+								<small>적립금</small>
+								<span>1%</span>
+							</li>
+							<li>
+								<small>수량</small>
+								<span>
+									<em>-</em>
+									<em>1</em>
+									<em>+</em>
+								</span>
+							</li>
+						</ul>
+						<hr>
+						<ul class="price">
+							<li>
+								<small>총 구매금액</small>
+								<span>21,000원</span>
+							</li>
+						</ul>
+						<div class="prd-btns">
+							<a href="#none" class="basket">장바구니</a>
+							<a href="#none">바로 구매하기</a>
+						</div>
+						<div class="nhn-btns">
+							<div class="npay">
+								<p>
+									<img src="images/sub_product/naver-logo.png" alt="naver-logo">
+									<small>네이버ID로 간편구매<br>
+										네이버페이</small>
+								</p>
+								<div>
+									<a href="#none">
+										<i class="xi-naver"></i>pay 구매
+									</a>
+									<a href="#none">찜</a>
+									<a href="#none"><i class="xi-message-o"></i></a>
+								</div>
+							</div>
+							<div class="membership">
+								<small>멤버십 첫달 무료가입하고 추가 4%!</small>
+								<span>
+									<button class="btn-pre"><i class="xi-angle-left-thin"></i></button>
+									<button class="btn-right"><i class="xi-angle-right-thin"></i></button>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="main-anchor">
+						<a href="#feature1">상세정보</a>
+						<a href="#feature2">주요성분
+						<!--<small>35</small>-->
+						</a>
+						<a href="#feature3">사용리뷰</a>
+						<a href="#feature4">사용방법</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- ! Section02 : Visual -->
+		<section class="section02 prd-visual">
+			<div class="inner">
+				<div class="visual-content">
+					<h3>
+						<i class="xi-tint"></i>
+						olive<br> oil<br> cleanser
+					</h3>
+					<div class="visual-image">
+						<img src="images/sub_product/prd-big.jpg" alt="prd-big">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ! Section03 : Introduce -->
+		<section class="section03 prd-intro" id="feature1">
+			<div class="inner">
+				<div class="intro-content">
+					<ul class="intro-heading">
+						<li>뛰어난<span> 보습</span></li>
+						<li>피부<span> 탄력</span></li>
+						<li>노폐물<span> 제거</span></li>
+						<li>간편한<span> 세정</span></li>
+					</ul>
+					<div class="intro-desc">
+						<div class="desc-big">
+							<em class="big-left">“</em>
+							<h2>
+								Skin health
+								<small>올리브 오일 클렌져로 되찾은 건강하고 아름다운 피부.</small>
+								Skin Beauty
+							</h2>
+							<em class="big-right">”</em>
+						</div>
+						<p>
+							올리브는 불포화 지방산과 비타민E, 토코페롤, 폴리페놀 등이 함유되어 있어 #피부 탄력에 좋으며
+							피부표면에 밀착되어 있는 #모공의 피지, 노폐물, 블랙헤드를 제거해주고
+							뛰어난 #보습효과로 세안 후 피부가 땅기지 않고 #촉촉하게 유지되게끔 도와줍니다.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ! Section04 : Feature -->
+		<section class="section04 prd-feature" id="feature2">
+			<div class="inner">
+				<div class="feature-content">
+					<div class="heading-desc">
+						<span>Ingredient</span>
+						<h2>자연에서 찾은 성분 그대로를 드립니다.</h2>
+					</div>
+					<div class="feature-item-wrap">
+						<div class="feature-item">
+							<!-- left 영역 -->
+							<div class="feature-item-left">
+								<div class="feature-item-desc">
+									<span class="feature-point">
+										<em>보습</em>
+										<em>윤기</em>
+									</span>
+									<h3 class="feature-desc">올리브</h3>
+									<p>
+										올리브의 풍부한 비타민 영양 성분이 피부에 밀착되어
+										메이크업과 노폐물을 부드럽게 클렌징 해 주며,
+										세안 후 촉촉한 보습 효과로
+										건강하고 윤기있는 피부 선사합니다.
+									</p>
+								</div>
+							</div>
+							<!-- right 영역 -->
+							<div class="feature-item-right">
+								<div class="feature-item-photo">
+									<img src="images/sub_product/ing_olive.jpg" alt="ing_olive">
+								</div>
+							</div>
+						</div>
+						<!-- Grape 좌,우 변경-->
+						<div class="feature-item grape">
+							<!-- left 영역 -->
+							<div class="feature-item-left">
+								<div class="feature-item-desc">
+									<span class="feature-point">
+										<em>활기</em>
+										<em>화사</em>
+									</span>
+									<h3 class="feature-desc">포도씨</h3>
+									<p>
+										항산화 성분으로 피부에 활기를 주어 부드럽고
+										윤이나는 피부로 만드어 줍니다.
+										멜라닌 색소의 생성을 억제하는 효과로
+										칙칙한 피부를 개선합니다.
+									</p>
+								</div>
+							</div>
+							<!-- right 영역 -->
+							<div class="feature-item-right">
+								<div class="feature-item-photo">
+									<img src="images/sub_product/ing_grapes.jpg" alt="ing_grapes">
+								</div>
+							</div>
+						</div>
+						<div class="feature-item">
+							<!--*3-->
+							<!-- left 영역 -->
+							<div class="feature-item-left">
+								<div class="feature-item-desc">
+									<span class="feature-point">
+										<em>각질</em>
+										<em>진정</em>
+									</span>
+									<h3 class="feature-desc">살구씨</h3>
+									<p>
+										묵은 각질과 피지, 블랙헤드 관리에 효과적이며,
+										피부 진정 효과로 부드러운 피부를 유지해줍니다.
+										장기간 사용할 경우 기미, 주근깨 관리에도 도움이 됩니다.
+									</p>
+								</div>
+							</div>
+							<!-- right 영역 -->
+							<div class="feature-item-right">
+								<div class="feature-item-photo">
+									<img src="images/sub_product/ing_fruit.jpg" alt="ing_fruit">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ! Section05 : Review -->
+		<section class="section05 prd-review" id="feature3">
+			<div class="inner">
+				<div class="review-content">
+					<div class="review-photo">
+						<img src="images/sub_product/skin.jpg" alt="skin">
+					</div>
+					<div class="review-desc-wrap">
+						<div class="review-desc">
+							<h3>review
+								<em><i class="fa fa-star"></i></em>
+								<em><i class="fa fa-star"></i></em>
+								<em><i class="fa fa-star"></i></em>
+								<em><i class="fa fa-star"></i></em>
+							</h3>
+							<p>
+							몇번이나 재구매했는지 기억도 안날정도로 
+							계속 쓰고있습니다. 순하고 자극없이 
+							잘 지워지니 너무 편하고 좋아요!
+								<span>by. min</span>
+							</p>
+						</div>
+						<div class="review-desc">
+							<h3>review
+								<em><i class="fa fa-star"></i></em>
+								<em><i class="fa fa-star"></i></em>
+								<em><i class="fa fa-star"></i></em>
+								<em><i class="fa fa-star"></i></em>
+							</h3>
+							<p>
+							40대는 보습에 신경써야 할 나이인지라 오일로 꾸준히 클렌징중이랍니다
+							예민한 피부에 이만한게 없어요!
+								<span>by. yony</span>
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- ! Section06 : Safety -->
+		<section class="section06 prd-safety">
+			<div class="inner">
+				<div class="safety-content">
+					<div class="heading-desc">
+						<span>Safety</span>
+						<h2>안심하고 사용하세요!</h2>
+					</div>
+					<div class="safety-item-wrap">
+						<ul>
+							<li>
+								<em>無</em>
+								<span>파라벤</span>
+							</li>
+							<li>
+								<em>無</em>
+								<span>인공색소</span>
+							</li>
+							<li>
+								<em>無</em>
+								<span>항료</span>
+							</li>
+							<li>
+								<em>無</em>
+								<span>벤조페논</span>
+							</li>
+							<li>
+								<em>無</em>
+								<span>동물성원료</span>
+							</li>
+						</ul>
+						<div class="safety-item-desc">
+							<p>
+								<em>전성분 :</em> 올리브오일73%, 포도씨오일, 살구씨오일, 천연비타민E, 올리브오일피이지-7에스터
+							</p>
+							<span>
+								올리브오일피이지-7에스터?
+								<em>올리브 성분의 계면활성제로 오일성분을 워터류에 첨가해 가용화 하도록 하는 원료</em>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- ! Section07 : Use -->
+		<section class="section07 prd-use" id="feature4">
+			<div class="inner">
+				<div class="prd-content">
+					<div class="prd-use-left">
+						<div class="heading-desc">
+							<span>How To Use</span>
+							<h2>사용방법</h2>
+						</div>
+						<!-- 슬릭스라이더 -->
+						<div class="use-slickslide">
+							<div class="use-desc"> <!-- *1 -->
+							  <p>
+							  	<b>1</b>
+							  	물기가 없는 손바닥에<br>
+									오일 적당량을 펌핑해주세요.<br>
+									<small>
+										비누, 폼클렌징등으로 2차세안 해주세요.
+									</small>
+							  </p>
+							</div>
+						  <div class="use-desc"> <!-- *2 -->
+							  <p>
+							  	<b>2</b>
+							  	얼굴 전체를 롤링하며<br>
+									1분정도 가볍게 마사지해주세요.<br>
+									<small>
+										비누, 폼클렌징등으로 2차세안 해주세요.
+									</small>
+							  </p>
+							</div>
+						  <div class="use-desc"> <!-- *3 -->
+							  <p>
+							  	<b>3</b>
+							  	미온수로 깨끗하게 씻은 후<br>
+									마무리 해주세요.<br>
+									<small>
+										비누, 폼클렌징등으로 2차세안 해주세요.
+									</small>
+							  </p>
+							</div>
+						</div>
+					</div>
+					<div class="prd-use-right">
+						<div class="use-video">
+							<img src="images/sub_product/skin.jpg" alt="use-skin">
+							<i class="xi-play-circle"></i>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</section>
+		<!-- ! Section08 : Rcommended -->
+		<section class="section08 prd-rmd">
+			<div class="inner">
+				<div class="rmd-content">
+					<div class="heading-desc">
+						<span>Recommended product</span>
+						<h2>함께하면 더 좋은 제품</h2>
+					</div>
+					<div class="rmd-item-wrap">
+						<div class="rmd-item"> <!-- *1 -->
+							<div class="rmd-photo"> <!--스케일용-->
+								<img src="images/sub_product/reco_01.jpg" alt="reco_01">
+							</div>
+							<div class="rmd-desc">
+								<span>보습세럼
+									<b>올리브 리얼 세럼 190ml</b>
+								</span>
+								<a href="#none">shop now</a>
+							</div>
+						</div>						
+						<div class="rmd-item"> <!-- *2 -->
+							<div class="rmd-photo"> <!--스케일용-->
+								<img src="images/sub_product/reco_02.jpg" alt="reco_02">
+							</div>
+							<div class="rmd-desc">
+								<span>보습로션
+									<b>올리브 리얼 로션 210ml</b>
+								</span>
+								<a href="#none">shop now</a>
+							</div>
+						</div>						
+						<div class="rmd-item"> <!-- *3 -->
+							<div class="rmd-photo"> <!--스케일용-->
+								<img src="images/sub_product/reco_03.jpg" alt="reco_03">
+							</div>
+							<div class="rmd-desc">
+								<span>수분크림
+									<b>올리브 리얼 크림 150ml</b>
+								</span>
+								<a href="#none">shop now</a>
+							</div>
+						</div>
+					</div> 
+				</div> 
+			</div>
+		</section>
+		
+		<!-- ! Section09 : Banner -->
+		<section class="section09 banner">
+			<div class="inner">
+				<div class="banner-content" onclick="location.href='index.html'" style="cursor: pointer;">
+					<span>
+						평일 오후 3시 전까지 결제하면, 당일출고!
+						<small>주말 공휴일 제외 물량과다의 경우 다음날 출고될 수 있습니다.</small>
+					</span>
+					<img src="images/sub_product/banner.jpg" alt="banner">
+				</div>
+			</div>
+		</section>
+		
+		<!-- ! Use-Video-Modal-->
+		<div class="use-video-modal">
+		  <i class="xi-close-thin"></i>
+		  <div class="video-content">
+				<iframe src="https://www.youtube.com/embed/77zKYElKTmc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+				</iframe>
+			</div>
+		</div>
+		
+
+		<!-- ! Footer -->
+		<footer>
+			<div class="inner">
+				<div class="footer-content">
+					<a href="#none" class="footer-logo">
+						<img src="images/logo.png" alt="footer-logo">
+					</a>
+					<address>
+						(주)OOC &nbsp;&nbsp; 대표:김민영 &nbsp;&nbsp;
+						사업자번호:XXX-XX-XXXXX 사업자정보확인 &nbsp;&nbsp;
+						사업장 소재지 : 경기도 수원시 XXX XXXX 120G 호<br>
+						통신판매신고번호 : 제2001-XXXX-1210호 &nbsp;&nbsp;
+						상담번호 : 1588-057X &nbsp;&nbsp; E-mail : mskyxxx@naver.com<br>
+						<span>copyright (c) ooc co.,Ltd.all rights reserved.</span>
+					</address>
+					<ul class="tel">
+						<li>
+							<b>고객센터 1588-057x</b><br>
+							상담전화 10:00~17:00(평일)<br>
+							카톡상담 10:00~17:00(평일)<br>
+						</li>
+					</ul>
+					<a class="kakao" href="https://cs.kakao.com/" target="_blank">
+						<img src="images/footer_kakao.png" alt="kakao">
+					</a>
+				</div>
+			</div>
+		</footer>
+	</div>
+	
+	<!-- ! Gototop -->
+	<a class="gototop" href="#">
+		<img src="images/btn_top.png" alt="top">
+	</a>
+</body>
+
+</html>
