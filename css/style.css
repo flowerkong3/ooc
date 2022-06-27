@@ -1,0 +1,676 @@
+@charset "UTF-8";
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;800&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+/* 눈누 Web Font */
+@font-face {
+  font-family: 'GmarketSansLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 눈누 Web Font */
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 
+! TODO:Logo-Color 로고컬러 
+#729a4c---green
+#C3B449---yellowgreen
+#F9C646---yellow 
+*/
+
+/* 주석 포인트 컬러 */
+/* ! Main Markup */
+/* * Sub Markup */
+/* ? Common Markup */
+/* TODO:메모장 */
+
+html {
+  /* TODO:IE에서는 안되기 때문에 Jquery로 하는게 좋다. */
+  /* scroll-behavior: smooth;  */
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.5em;
+  color: #222;
+}
+/* ? Reset CSS */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; color: #222;}
+ul {margin: 0; padding: 0; list-style: none;}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 400;
+  margin: 0;
+}
+button {cursor: pointer;}
+button,input,textarea,select {
+  outline: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* ? Common */
+.inner {
+  /* border: 1px solid #000; */
+  width: 1200px;
+  margin: auto;
+   /* TODO:중앙 정렬,위치값인 공통요소외에 다른 요소는 주지 않는게 좋다!!
+   --inner를 준 모든 영역에 영향을 주기 때문에  */
+}
+
+.container {
+  /* width: 1870px; */
+  margin: auto;
+  /* border: 1px solid red; */
+}
+/* ! Header */
+header {
+  z-index: 999;
+  /* border: 1px solid #000; */
+  position: fixed;
+  width: 100%;
+  display: flex;
+  transition: 0.5s;
+}
+/* *Scroll Effcet */
+header.active {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+header.active h1, 
+header.active .gnb a {
+  filter: invert(85%);
+}
+header.active .lnb li a {
+  color: #222;
+}
+header.active .sub-menu li a {
+  color: #fff;
+}
+header.active .sub-menu li a:hover {
+  color: #ccc;
+}
+/* *nav */
+nav {
+  /* border: 5px solid red; */
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  margin: auto;
+}
+nav h1 {
+  /* border: 1px solid #000; */
+  flex: 2;
+  /* width: 100px; */
+}
+nav h1 a {
+  /* width: inherit; */
+  /* display: block; */
+}
+nav h1 a img {
+  /* width: 100%; */
+}
+.nav-menu {
+  /* border: 1px solid #000; */
+  /* display: flex; */
+}
+.lnb {
+  /* border: 1px solid red; */
+  display: flex;
+  margin-right: 70px;
+}
+.lnb>li {
+  position: relative;
+  margin-right: 50px;
+}
+.lnb>li:last-child {
+  margin-right: 0;
+}
+.lnb>li>a {
+  /* border: 1px solid #000; */
+  color: #fff;
+  text-transform: uppercase;
+  padding: 35px 0px;
+}
+.gnb {
+  /* border: 1px solid #000; */
+}
+.gnb a {
+  margin-right: 10px;
+  width: 20px;
+  /* border: 1px solid #000; */
+  display:inline-block ;
+}
+.gnb a:last-child {
+  margin-right: 0;
+}
+.gnb a img {
+  width: 100%;
+}
+/* *Sub-menu */
+.sub-menu {
+  /* border: 1px solid #000; */
+  position: absolute;
+  top: 60px;
+  height: 0px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.sub-menu li {
+  width: 100px;
+  line-height: 1.8em;
+}
+.sub-menu li a {
+  font-size: 14px;
+  padding: 10px 0;
+  color: #fff;
+}
+.sub-menu li a:hover {
+  color: rgb(224, 224, 224);
+}
+/* *Trigger */
+.trigger {
+  display: none;
+}
+
+
+
+/* *Menu 배경보이게 */
+.menu-bg {
+  z-index: -1;
+  position: absolute;
+  top: 100px;
+  width: 100%; 
+  height: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
+}
+/* *jQuery Hover Effect */
+/* active 클래스명을 가지면 sub-menu 보이게 */
+.lnb>li.active .sub-menu {
+  height: 130px;
+}
+/* 메뉴 배경색 보이게 */
+.menu-bg.active {
+  height: 130px;
+}
+
+/* ! Main */
+main {
+  height: 100vh;
+  /* background-color: red; */
+}
+.main-banner-slider {
+  /* height: 100vh; */
+}
+.main-banner-slider div {
+  outline: none;
+  /* cursor: pointer; */
+}
+.main-banner-slider div img {
+  width: 100%;
+  display: block;
+}
+.main-logo-mobile {
+  display: none;
+}
+/* ! Section 시작 */
+/* ! About Section Section02 */
+.about {}
+.about-heading {
+  text-align: center;
+  padding: 250px 0;
+}
+.about-heading h2 {
+  width: 100px;
+  margin: auto;
+  /* font-weight: 600; */
+  /* font-size: 100px; */
+  /* color:#729a4c; */
+}
+.about-heading h2 img {
+  width: 100%;
+}
+.about-heading h3 {
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  font-style: normal;
+  margin-top: 50px;
+  font-size: 46px;
+  font-weight: 500;
+  color:#517034;
+}
+/* *logo-color  */
+.about-heading h3 b {
+  font-size: 52px;
+  letter-spacing: -10px;
+}
+.about-heading h3 b:nth-child(1) {
+  color: #729a4c;
+}  
+.about-heading h3 b:nth-child(2) {
+  color: #C3B449;
+}  
+.about-heading h3 b:nth-child(3) {
+  color: #F9C646;
+  margin-right: 8px;
+}  
+.about-heading p {
+  margin-top: 35px;
+  line-height: 1.7em;
+  font-size: 18px;
+}
+.about-heading p span {
+  font-weight: 400;
+}
+/* ! Product-bg Section03  */
+.product-bg {
+  height: 100vh;
+  background: url(../images/section03_img.jpg)no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* ! Product-buy Section04 */
+.product-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  /* *배경 background로 넣는 방법 */
+  background: url(../images/section04_bg.png)no-repeat center ;
+  background-size: contain;
+  background-position-x: 50%;
+}
+.product-buy-inner {
+  /* border: 1px solid blue; */
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  width: 1300px;
+  height: 100%;
+  margin: auto;
+}
+/* *이미지 buy-photo */
+.buy-photo {
+  flex: 2;
+}
+.buy-photo img {
+  width: 100%;
+}
+/* *텍스트 buy-heading */
+.buy-heading {
+  /* border: 1px solid red; */
+  flex: 1;
+  padding-left: 20px;
+}
+.buy-heading h3 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.3em;
+  color: #5a6450;
+}
+.buy-heading h3 span {
+  font-weight: 300;
+}
+/* *구매하기 btn */
+.buy-heading a {
+  display: inline-block;
+  background-color: #729a4c;
+  color: #fff;
+  padding: 5px 20px;
+  margin-top: 50px;
+  margin-left: 5px;
+  letter-spacing: 3px;
+}
+.buy-heading a:after{
+  content:"\f0da";
+  font-family: fontawesome;
+  color: #fff;
+  margin-left: 10px;
+}
+.buy-heading a:hover {
+  background-color: #222;
+}
+/* * 배경 img로 넣는 방법 */
+/* .buy-bg {
+  z-index: -1;
+  position: absolute;
+  top: 0; left: 50px;
+}
+.buy-bg img {
+  width: 100%;
+} */
+/* ! Brand-direct Section05 */
+.brand-direct {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/section05_bg.png)no-repeat center center;
+  background-size: cover;
+  /* height: 800px; */
+}
+/* *가상요소 bg-color */
+.brand-direct:before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to left, rgba(58, 109, 49, 0.7),rgba(179, 161, 1, 0.7));
+}
+.brand-direct-heading {
+  position: relative;
+  /* border: 5px solid #000; */
+  /* text-align: center; */
+  padding: 250px 0;
+  color: #fff;
+}
+.brand-direct-heading h2 {
+  font-size: 48px;
+  line-height: 1.3em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.brand-direct-heading h2 span {
+  display: block;
+  font-weight: 100;
+}
+/* *Brand 바로가기 btn */
+.brand-direct-heading a {
+  /* position: absolute; */
+  /* top: 0; left: 0; */
+  /* left: 50%; */
+  /* transform: translate(-50%); */
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  width: 180px;
+  margin-left: 127.5px;
+  /* display: block; */
+  /* margin: auto; */
+  padding: 4px 20px;
+  /* box-sizing: border-box; */
+  /* margin-top: 50px; */
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 18px;
+}
+/* .brand-direct-heading a span {
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+  display: block;
+} */
+.brand-direct-heading a img {
+  transition: 0.3s;
+}
+.brand-direct-heading a:hover img {
+  margin-left: 20px;
+  /* border: 1px solid red; */
+  /* position: absolute; */
+  /* right: 12px; top: 25%; */
+  /* width: 30px; */
+  /* display: block; */
+}
+/* *Hover Effect 바로가기 */
+.brand-direct-heading a:hover {
+  /* background-color: #222;
+  border: 1px solid #222; */
+}
+/* ! Feature Section06 */
+.feature {
+  /* height: 70vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feature-content {
+  /* border: 3px solid #000; */
+  display: flex;
+  justify-content: space-between;
+  padding: 150px 200px;
+}
+/* *items */
+.items {
+  /* border: 1px solid red; */
+  text-align: center;
+}
+/* *Up-image 이미지 */
+.up-image {
+  /* border: 1px solid #000; */
+  position: relative;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+  transition: 0.3s;
+}
+/* *Hover Effcet */
+.up-image:hover{
+  top: -20px;
+}
+.up-image span {
+  position: absolute;
+  width: 100%;
+  top: 50%; left: 0;
+  transform: translate(0,-50%);
+  color: #fff;
+  font-size: 32px;
+  text-transform: capitalize;
+  font-family: 'Montserrat', sans-serif;
+}
+.up-image img {
+  width: 100%;
+}
+/* *Down-desc텍스트 */
+.down-desc {}
+.down-desc h3 {
+  margin: 20px 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+.down-desc p {
+  line-height: 1.7em;
+}
+
+/* ! Instagram Section07 */
+.instagram {
+  /* border: 5px solid #000; */
+  background-color: rgb(220, 231, 194);
+  padding: 150px 0px;
+}
+.instagram-content {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+.instagram-items {
+  /* border: 3px solid blue; */
+}
+.instagram-items h3 {
+  /* border: 1px solid #000; */
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  transition: 0.2s;
+}
+
+/* *이미지 */
+.photo {
+  /* border: 1px solid #000; */
+  position: relative;
+  width: 310px; 
+  height: 500px;
+  /* TODO:photo안의 아이템 가운데 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  
+}
+.photo-image {
+  /* border: 1px solid #000; */
+  /* position: absolute; */
+  width: 100%; 
+  height: 450px;
+  /* margin-top: 25px; */
+  overflow: hidden;
+}
+.photo-image img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+/* *sns */
+.photo-sns {
+  /* border: 1px solid #000; */
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+.photo-sns a {
+  display: inline-block;
+  width: 25px; 
+  height: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.342);
+  font-size: 14px;
+}
+/* *Hover Effcet */
+.instagram-items h3 .fa-heart:hover {
+  color: rgba(220, 20, 60, 0.808);
+}
+.photo-image img:hover {
+  transform: scale(1.1);
+}
+.photo-sns a:hover {
+  background-color: #ccc;
+}
+/* ! Footer */
+footer {
+  background-color: #333;
+  color: rgba(238, 238, 238, 0.829);
+  padding: 50px 0;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.footer-logo {
+  display: block;
+  width: 100px;
+}
+.footer-logo img {
+  width: 100%;
+  filter:invert(20%);
+}
+address {
+  font-style: normal;
+}
+address span {
+  display: block;
+  margin-top: 10px;
+}
+.tel {}
+.tel b {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.kakao {
+  display: block;
+  width: 70px;
+}
+.kakao img {
+  width: 100%;
+}
+
+/* ! Gototop */
+.gototop {
+  position: fixed;
+  right: 20px;
+  bottom: -20px; 
+  opacity: 0;
+  border-radius: 50%;
+  width: 50px; height: 50px;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+.gototop img {
+  width: 100%;
+}
+/* *Scroll Effect */
+.gototop.active {
+  bottom: 20px;
+  opacity: 1;
+}
+
+/* ? Slick.js */
+/* ? Customizing CSS */
+/* *Prev, Next Button */
+button.slick-arrow {
+  z-index: 1;
+  display: block !important;
+  border: 1px solid #5d6b50;
+  width: 70px;
+  height: 70px; 
+  border-radius: 50%;
+}
+.slick-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.438);
+}
+.slick-prev {
+  left: 100px;
+}
+.slick-next {
+  right: 100px;
+}
+.slick-prev::before,
+.slick-next::before {
+  font-family: fontawesome;
+  font-size: 20px;
+  color: #455337;
+}
+.slick-prev::before {
+  /* content:url("../images/btn_left.png"); */
+  content: "\f0d9";
+}
+.slick-next::before {
+  content:"\f0da";
+}
+/* *Dot */
+ul.slick-dots {
+  bottom: 30px;
+}

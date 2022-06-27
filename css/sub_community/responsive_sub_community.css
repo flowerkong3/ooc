@@ -1,0 +1,54 @@
+@media (max-width: 768px) {
+  body {
+    /* width: 100vw; */
+    /* box-sizing: border-box; */
+  }
+  .community-main {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  /* *Community-Heading */
+  .community-heading a{
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.418);
+    padding: 15px 0;
+  }
+  /* *Community-Form */
+  .community-form {
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  form {
+    width: 100%;
+  }
+  .field li {
+    /* border: none; */
+  }
+  .field li label{
+    display: block;
+    /* border: 1px solid #000; */
+  }
+  .field li input,
+  .field li select,
+  .field li textarea {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .field li.text-wrap{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  /* *Btn */
+  .field-btn {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .field-btn button {
+    width: 100%;
+    margin: 5px;
+    font-size: 16px;
+  }
+  
+}

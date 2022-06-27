@@ -1,0 +1,220 @@
+@media (max-width: 768px) {
+	.inner {
+		width: 100%;
+		padding: 0 20px;
+	}
+	.heading-desc h2 {
+		font-size: 34px;
+		line-height: 1.2em;
+		margin-top: 1px;
+	}
+	
+	/* ! ======= Section01 : Main ====== */
+	.prd-main {
+		padding: 50px 0;
+		padding-bottom: 100px;
+	}
+	.main-left, .main-right {
+	/*	border: 1px solid blue;*/
+		float: none;
+		width: 100%;
+	}
+	.circle {
+		right: 20px;
+	}
+	.btn-photo {
+		bottom: 60px;	
+		left: 20px;
+	}
+	.btn-items {
+		display: block;
+		margin-bottom: 5px;
+	}
+	.main-right {
+		padding: 0;
+	}
+	.main-right h2 {
+		text-align: center;
+		margin-bottom: 70px;
+	}
+	.prd-btns a {
+		display: block;
+		width: 100%;
+		margin: 10px 0 ;
+	}
+	.nhn-btns > div {
+		width: 100%;
+	}
+	
+	.main-anchor {
+		margin-top: 70px;
+	}
+	/* ! ======= Section02 : Visual ======= */
+	.prd-visual .inner {
+		margin-top: -70px;
+/*		padding: 0;*/
+	}
+	.visual-content h3 {
+		left: 50%;
+		transform: translateX(-40%);
+	}
+	/* ! ======= Section03 : Introduce ======= */
+	.prd-intro {
+		padding: 0;
+		padding-top: 30px;
+	}
+	.intro-heading li {
+		font-size: 18px;
+	}
+	.intro-heading li span {
+		display: block;
+	}
+	.intro-desc {
+		padding: 50px 0;
+		width: 100%;
+	}
+	.desc-big em {
+		font-size: 30px;
+	}
+	.big-left {
+		left: 20px;
+	}
+	.big-right {
+		right: 20px;
+	}
+	.desc-big h2{
+		font-size: 46px;
+	}
+	.intro-desc p {
+		font-size: 16px;
+		letter-spacing: -1px;
+	}
+	
+	/* ! ======= Section04 : Feature ======= */
+	.prd-feature {
+		padding: 0;
+	}
+	.feature-item {
+		padding: 20px;
+	}
+	.feature-item > div {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+	.feature-item-desc {
+		width: 100%;
+		margin-bottom: 70px;
+	}
+	.feature-item-desc h3 {
+		font-size: 28px;
+	}
+	.feature-item-desc p {
+		font-size: 16px;
+	}
+	.feature-item-photo {
+		width: 100%;
+		height: 200px;
+	}
+	/* ! ======= Section05 : Review ======= */
+	.prd-review {
+		padding: 0;
+	}
+	.review-content {
+		margin-top: 50px;
+	}
+	.review-desc-wrap {
+		top: 120px;
+		left: 0px;
+	}
+	/* ! ======= Section06 : Safety ======= */
+	.prd-safety {
+		padding: 70px 0;
+	}
+	.safety-item-wrap ul {
+		width: 100%;
+		padding: 0;
+		margin-top: 20px;
+/*		display: block;*/
+/*		overflow: hidden;*/
+/*		margin: auto;*/
+/*		flex-direction: column;*/
+	}
+	.safety-item-wrap ul li {
+		width: 70px;
+		height: 70px;
+		padding-top: 50px;
+	}
+	.safety-item-wrap ul li em {
+		font-size: 26px;	
+		display: block;
+		margin-top: -35px;
+	}
+	.safety-item-wrap ul li span {
+		font-size: 10px;
+		letter-spacing: -1px;
+}
+	.safety-item-desc {
+		width: 100%;
+		text-align: center;
+		margin-top: 50px;
+	}
+	/* ! ======= Section07 : Use ======= */
+	.prd-use {
+		padding: 0;
+	}
+	.prd-content > div {
+		float: none;
+		width: 100%;
+	}
+	.prd-use-left .heading-desc{
+		transform: scale(1);
+	}
+	.use-desc p {
+		text-align: center;
+	/*	font-size: 14px;*/
+	/*	line-height: 1.1em;*/
+		padding: 0px;
+		margin-bottom: 15px;
+	}
+	.use-desc p b {
+		padding: 15px 0;
+	}
+	.use-video {
+		width: 100%;
+		padding-top: 30px;
+	}
+	/* ! ======= Section08 : Rcommended ======= */
+	.prd-rmd {
+		padding: 70px 0;
+	}
+	.rmd-item-wrap > div {
+		float: none;
+		width: 100%;
+	}
+	/* ! ======= Section09 : Banner ======= */
+	.banner {
+		padding-bottom: 70px;
+	}
+	.banner-content {
+		height: 180px;
+	}
+	.banner-content span {
+		width: 90%;
+		font-size: 26px;
+	}
+	.banner-content span small {
+		margin-top: 10px;
+		line-height: 1.5em;
+	}
+
+	.use-video-modal i {
+		font-size: 24px;
+	}
+
+	/* ! ======= Slick Custom CSS ======= */
+	.use-slickslide .slick-dots {
+		display: block !important;
+	}
+	
+}

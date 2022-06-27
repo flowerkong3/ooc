@@ -1,0 +1,133 @@
+@media (max-width: 768px) {
+  /* ! Main */
+  .brand-main {
+    height: 100vh;
+    padding-top: 30px;
+  }
+  .brand-main-content {
+    padding: 0px 20px;
+  }
+  .brand-main-content h2 span {
+    display: block;
+    font-size: 32px;
+    line-height: 1.5em;
+    margin-top: 0px;
+  }
+  .brand-main-content hr {
+    margin: 25px auto;
+  }
+  .brand-main-content p {
+    line-height: 1.6em;
+    padding: 0 20px;
+    font-size: 20px;
+    /* font-size: 24px; */
+  }
+  .brand-main-content p span {
+    font-size: 16px;
+    line-height: 1.6em;
+  }
+  /* ! Process Section02 */
+  /* *이미지 */
+  .pocess-image {
+    margin: auto;
+    /* border: 10px solid #fff; */
+    width: 250px;
+    height: 250px;
+    margin-bottom: 25px;
+  }
+  /* *텍스트 */
+  .pocess-desc {
+    padding: 0 20px;
+    font-size: 16px;
+  }
+  .pocess-desc p {
+    line-height: 1.6em;
+  }
+  /* ! Real-bg Section03 */
+  .real-image {
+    width: 150px;
+    position: absolute;
+    top: 80px; 
+    right: 10%;
+  }
+  /* ! Efficacy Section04 */
+  .efficacy {
+    /* height: 800px; */
+  }
+  .efficacy-content {
+    flex-direction: column;
+  }
+  .efficacy-items {
+    /* height: 500px; */
+    width: 100%;
+    /* margin-top: 200px;
+    margin-bottom: 200px; */
+  }
+  .efficacy-desc {
+    padding: 70px 0;
+  }
+  .efficacy-desc h3 {
+    font-size: 18px;
+  }
+  .efficacy-desc p span {
+    display: block;
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+  .efficacy-photo {
+    margin-top: 200px;
+  }
+  /* ! Promise Section05 */
+  .promise {
+    padding: 100px 0px;
+  }
+  .promise-content h2{
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+  /* *promise-items 3가지 전체감싸는 박스 */
+  .promise-items {
+    flex-direction: column;
+  }
+  /* *item*/
+  .promise-item {
+    margin-bottom: 70px;
+  }
+  .promise-item:last-child {
+    margin-bottom: 0;
+  }
+  .promise-item::after {
+    display: none;
+  }
+  .promise-item h3 span {
+    letter-spacing: -1px;
+    line-height: 1.7em;
+  }
+
+
+  /* ? Slick.js */
+  /* ? Customizing CSS */
+  .pocess-content .slick-prev, 
+  .pocess-content .slick-next {
+    display: block !important;
+    top: 140px;
+    /* width: 30px;
+    height: 30px; */
+  }
+  .pocess-content .slick-prev {
+    left: 3%;
+  }
+  .pocess-content .slick-next {
+    right: 3%;
+  }
+  .pocess-content .slick-prev:before, 
+  .pocess-content .slick-next:before {
+    font-size: 28px;
+  }
+  .pocess-content .slick-dots {
+    display: block !important;
+    opacity: 1;
+    bottom: -50px;
+  }
+  
+}

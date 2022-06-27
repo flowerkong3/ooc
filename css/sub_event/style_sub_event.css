@@ -1,0 +1,404 @@
+@charset "UTF-8";
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;800&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+/* 눈누 Web Font */
+@font-face {
+  font-family: 'GmarketSansLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 눈누 Web Font */
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 
+! TODO:Logo-Color 로고컬러 
+#729a4c---green
+#C3B449---yellowgreen
+#F9C646---yellow 
+*/
+
+/* 주석 포인트 컬러 */
+/* ! Main Markup */
+/* * Sub Markup */
+/* ? Common Markup */
+/* TODO:메모장 */
+
+html {
+  /* TODO:IE에서는 안되기 때문에 Jquery로 하는게 좋다. */
+  /* scroll-behavior: smooth;  */
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.5em;
+  color: #222;
+}
+/* ? Reset CSS */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; color: #222;}
+ul {margin: 0; padding: 0; list-style: none;}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 400;
+  margin: 0;
+}
+button {cursor: pointer;}
+button,input,textarea,select {
+  outline: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* ? Common */
+.inner {
+  /* border: 1px solid #000; */
+  width: 1200px;
+  margin: auto;
+   /* TODO:중앙 정렬,위치값인 공통요소외에 다른 요소는 주지 않는게 좋다!!
+   --inner를 준 모든 영역에 영향을 주기 때문에  */
+}
+
+.container {
+  /* width: 1870px; */
+  margin: auto;
+  /* border: 1px solid red; */
+}
+/* ! Header */
+header {
+  z-index: 999;
+  /* border: 1px solid #000; */
+  position: fixed;
+  width: 100%;
+  display: flex;
+  transition: 0.5s;
+}
+/* *Scroll Effcet */
+header.active {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+header.active h1, 
+header.active .gnb a {
+  filter: invert(85%);
+}
+header.active .lnb li a {
+  color: #222;
+}
+header.active .sub-menu li a {
+  color: #fff;
+}
+header.active .sub-menu li a:hover {
+  color: #ccc;
+}
+/* *nav */
+nav {
+  /* border: 5px solid red; */
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  margin: auto;
+}
+nav h1 {
+  /* border: 1px solid #000; */
+  flex: 2;
+  /* width: 100px; */
+}
+nav h1 a {
+  /* width: inherit; */
+  /* display: block; */
+}
+nav h1 a img {
+  /* width: 100%; */
+}
+.nav-menu {
+  /* border: 1px solid #000; */
+  /* display: flex; */
+}
+.lnb {
+  /* border: 1px solid red; */
+  display: flex;
+  margin-right: 70px;
+}
+.lnb>li {
+  position: relative;
+  margin-right: 50px;
+}
+.lnb>li:last-child {
+  margin-right: 0;
+}
+.lnb>li>a {
+  /* border: 1px solid #000; */
+  color: #fff;
+  text-transform: uppercase;
+  padding: 35px 0px;
+}
+.gnb {
+  /* border: 1px solid #000; */
+}
+.gnb a {
+  margin-right: 10px;
+  width: 20px;
+  /* border: 1px solid #000; */
+  display:inline-block ;
+}
+.gnb a:last-child {
+  margin-right: 0;
+}
+.gnb a img {
+  width: 100%;
+}
+/* *Sub-menu */
+.sub-menu {
+  /* border: 1px solid #000; */
+  position: absolute;
+  top: 60px;
+  height: 0px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.sub-menu li {
+  width: 100px;
+  line-height: 1.8em;
+}
+.sub-menu li a {
+  font-size: 14px;
+  padding: 10px 0;
+  color: #fff;
+}
+.sub-menu li a:hover {
+  color: rgb(224, 224, 224);
+}
+/* *Trigger */
+.trigger {
+  display: none;
+}
+
+
+
+/* *Menu 배경보이게 */
+.menu-bg {
+  z-index: -1;
+  position: absolute;
+  top: 100px;
+  width: 100%; 
+  height: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
+}
+/* *jQuery Hover Effect */
+/* active 클래스명을 가지면 sub-menu 보이게 */
+.lnb>li.active .sub-menu {
+  height: 130px;
+}
+/* 메뉴 배경색 보이게 */
+.menu-bg.active {
+  height: 130px;
+}
+
+/* ! Main */
+.event-main {
+  height: 1600px;
+  background: url(../../images/sub_event/event_bg.jpg)no-repeat;
+  background-size: cover;
+}
+.event-content {
+  /* border: 1px solid #000; */
+  width: 750px;
+  margin: auto;
+  padding-top: 100px;
+}
+.event-heading {
+  text-align: center;
+  color: #fff;
+  background: url(../../images/sub_event/event_thankyou.png)no-repeat center;
+  background-size: contain;
+}
+.event-heading img {
+  margin-top: 250px;
+  width: 300px;
+}
+.event-heading h2 {
+  margin-top: 30px;
+  font-size: 50px;
+  line-height: 1.1em;
+  font-family: 'GmarketSansLight';
+}
+.event-heading h2 span {
+  display: block;
+  font-size: 18px;
+}
+/* *event-items */
+.event-items {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.event-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
+  border-radius: 5px;
+  height: 400px;
+  background-color: #fff;
+  color: #222;
+}
+/* 공통 요소 */
+.event-item li {
+  /* border: 1px solid red; */
+}
+/* *이벤트 텍스트 */
+.dsec {
+  padding-top: 50px;
+  /* margin-left: 50px; */
+  font-family: 'GmarketSansLight';
+}
+.dsec h2 {
+  display: inline-block;
+  font-size: 24px;
+  border-radius: 30px;
+  width: 150px;
+  height: 40px;
+  line-height: 43px;
+  text-align: center;
+  background-color: #729a4c;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'GmarketSansBold';
+}
+.dsec h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 28px;
+  line-height: 1.3em;
+  text-transform: uppercase;
+}
+.dsec h3 span {
+  text-decoration: underline;
+}
+.dsec h3 b {
+  font-family: 'GmarketSansBold';
+}
+.dsec p {}
+/* *구매 btn */
+.dsec a {
+  display: inline-block;
+  border: 1px solid #000;
+  margin-top: 50px;
+  padding: 5px 20px;
+}
+.dsec a img {
+  width: 25px;
+  transition: 0.3s;
+  margin-left: 10px;
+}
+.dsec a:hover img {
+  margin-left: 20px;
+}
+/* *이벤트 이미지 */
+.photo {
+  display: flex;
+  align-items: center;
+}
+.photo.event1 {
+  width: 250px;
+  margin-left: 120px;
+}
+.photo.event2 {
+  width: 300px;
+}
+.photo img {
+  width: 100%;
+}
+hr {
+  width: 80%;
+  border: 1px dashed #fff;
+}
+/* ! Section 시작 */
+/* ! About Section Section02 */
+
+/* ! Footer */
+footer {
+  background-color: #333;
+  color: rgba(238, 238, 238, 0.829);
+  padding: 50px 0;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.footer-logo {
+  display: block;
+  width: 100px;
+}
+.footer-logo img {
+  width: 100%;
+  filter:invert(20%);
+}
+address {
+  font-style: normal;
+}
+address span {
+  display: block;
+  margin-top: 10px;
+}
+.tel {}
+.tel b {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.kakao {
+  display: block;
+  width: 70px;
+}
+.kakao img {
+  width: 100%;
+}
+
+/* ! Gototop */
+.gototop {
+  position: fixed;
+  right: 20px;
+  bottom: -20px; 
+  opacity: 0;
+  border-radius: 50%;
+  width: 50px; height: 50px;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+.gototop img {
+  width: 100%;
+}
+/* *Scroll Effect */
+.gototop.active {
+  bottom: 20px;
+  opacity: 1;
+}
+
+/* ? Slick.js */
+/* ? Customizing CSS */
+/* *Prev, Next Button */
+/* *Dot */

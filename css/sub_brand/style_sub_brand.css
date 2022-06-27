@@ -1,0 +1,564 @@
+@charset "UTF-8";
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;800&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+/* 눈누 Web Font */
+@font-face {
+  font-family: 'GmarketSansLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 눈누 Web Font */
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 
+! TODO:Logo-Color 로고컬러 
+#729a4c---green
+#C3B449---yellowgreen
+#F9C646---yellow 
+*/
+
+/* 주석 포인트 컬러 */
+/* ! Main Markup */
+/* * Sub Markup */
+/* ? Common Markup */
+/* TODO:메모장 */
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.5em;
+  color: #222;
+}
+/* ? Reset CSS */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; color: #222;}
+ul {margin: 0; padding: 0; list-style: none;}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 400;
+  margin: 0;
+}
+button {cursor: pointer;}
+button,input,textarea,select {
+  outline: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* ? Common */
+.inner {
+  /* border: 1px solid #000; */
+  width: 1200px;
+  margin: auto;
+   /* TODO:중앙 정렬,위치값인 공통요소외에 다른 요소는 주지 않는게 좋다!!
+   --inner를 준 모든 영역에 영향을 주기 때문에  */
+}
+
+.container {
+  /* width: 1870px; */
+  margin: auto;
+  /* border: 1px solid red; */
+}
+/* ! Header */
+header {
+  z-index: 999;
+  /* border: 1px solid #000; */
+  position: fixed;
+  width: 100%;
+  display: flex;
+  transition: 0.5s;
+}
+/* *Scroll Effcet */
+header.active {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+header.active h1, 
+header.active .gnb a {
+  filter: invert(85%);
+}
+header.active .lnb li a {
+  color: #222;
+}
+header.active .sub-menu li a {
+  color: #fff;
+}
+header.active .sub-menu li a:hover {
+  color: #ccc;
+}
+/* *nav */
+nav {
+  /* border: 5px solid red; */
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  margin: auto;
+}
+nav h1 {
+  /* border: 1px solid #000; */
+  flex: 2;
+  /* width: 100px; */
+}
+nav h1 a {
+  /* width: inherit; */
+  /* display: block; */
+}
+nav h1 a img {
+  /* width: 100%; */
+}
+.nav-menu {
+  /* border: 1px solid #000; */
+  /* display: flex; */
+}
+.lnb {
+  /* border: 1px solid red; */
+  display: flex;
+  margin-right: 70px;
+}
+.lnb>li {
+  position: relative;
+  margin-right: 50px;
+}
+.lnb>li:last-child {
+  margin-right: 0;
+}
+.lnb>li>a {
+  /* border: 1px solid #000; */
+  color: #fff;
+  text-transform: uppercase;
+  padding: 35px 0px;
+}
+.gnb {
+  /* border: 1px solid #000; */
+}
+.gnb a {
+  margin-right: 10px;
+  width: 20px;
+  /* border: 1px solid #000; */
+  display:inline-block ;
+}
+.gnb a:last-child {
+  margin-right: 0;
+}
+.gnb a img {
+  width: 100%;
+}
+/* *Sub-menu */
+.sub-menu {
+  /* border: 1px solid #000; */
+  position: absolute;
+  top: 60px;
+  height: 0px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.sub-menu li {
+  width: 100px;
+  line-height: 1.8em;
+}
+.sub-menu li a {
+  font-size: 14px;
+  padding: 10px 0;
+  color: #fff;
+}
+.sub-menu li a:hover {
+  color: rgb(224, 224, 224);
+}
+/* *Trigger */
+.trigger {
+  display: none;
+}
+
+
+
+/* *Menu 배경보이게 */
+.menu-bg {
+  z-index: -1;
+  position: absolute;
+  top: 100px;
+  width: 100%; 
+  height: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
+}
+/* *jQuery Hover Effect */
+/* active 클래스명을 가지면 sub-menu 보이게 */
+.lnb>li.active .sub-menu {
+  height: 130px;
+}
+/* 메뉴 배경색 보이게 */
+.menu-bg.active {
+  height: 130px;
+}
+
+/* ! Main */
+.brand-main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: url(../../images/sub_brand/sub_brand-main.jpg)no-repeat center;
+  background-size: cover;
+}
+.brand-main::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background:rgba(57, 78, 0, 0.2);
+}
+.brand-main-content {
+  position: relative;
+  /* border: 1px solid red; */
+  color: #fff;
+  text-align: center;
+  margin: 100px 0;
+}
+.brand-main-content h2 {
+  font-size: 14px;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'GmarketSansLight';
+}
+.brand-main-content h2 span {
+  display: block;
+  font-size: 42px;
+  font-family: 'GmarketSansBold';
+  margin-top: 15px;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-weight: 600;
+}
+.brand-main-content hr {
+  border: none;
+  width: 1px;
+  height: 50px;
+  background-color: #fff;
+  margin: 40px auto;
+}
+.brand-main-content p {
+  font-size: 24px;
+}
+.brand-main-content p span {
+  display: block;
+  font-size: 16px;
+  margin-top: 25px;
+  line-height: 1.6em;
+}
+
+/* ! Section 시작 */
+/* ! Process Section02 */
+.process {
+  padding: 100px 0;
+}
+.process-content {
+}
+.pocess-item {
+  /* border: 3px solid red; */
+  outline: none;
+  /* top: -130px; */
+  /* padding-bottom: 50px; */
+  text-align: center;
+}
+.pocess-item div {
+}
+/* *이미지 */
+.pocess-image {
+  margin: auto;
+  /* border: 10px solid #fff; */
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+.pocess-image img {
+  height: 100%;
+}
+/* *텍스트 */
+.pocess-desc {
+  /* border: 1px solid #000; */
+}
+.pocess-desc h3,
+.efficacy-desc h3 {
+  font-size: 20px;
+  font-family: 'GmarketSansBold';
+  margin: 20px 0;
+}
+.pocess-desc p {
+  line-height: 1.8em;
+}
+/* ! Real-bg Section03 */
+.real-bg {
+  height: 80vh;
+  position: relative;
+  background: url(../../images/sub_brand/sub_brand-sec3-bg.jpg)no-repeat center;
+  background-size: cover;
+}
+.real-image {
+  width: 180px;
+  position: absolute;
+  top: 50px; 
+  right: 18%;
+}
+.real-image img{
+  width: 100%;
+}
+/* ! Efficacy Section04 */
+.efficacy {
+  /* height: 80vh; */
+}
+.efficacy-content {
+  /* height: 80vh; */
+  display: flex;
+}
+.efficacy-content div {
+  flex: 1;
+  /* border: 1px solid #000; */
+}
+/* *efficacy-desc */
+.efficacy-items {
+  display: flex;
+  position: relative;
+  
+}
+.efficacy-desc {
+  text-align: center;
+  position: absolute;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%,-50%);
+  transition: 0.3s;
+}
+.efficacy-desc:nth-child(1) {}
+/* 2번째는 안보였다가 */
+.efficacy-desc:nth-child(2) {
+  /* display: none; */
+  opacity: 0;
+}
+/* 2번째 텍스트에 active가 할당되면 보이고 */
+.efficacy-desc02.active {
+  /* display: block; */
+  opacity: 1;
+}
+/* 1번째 텍스트에 active가 할당되면 사라지고 */
+.efficacy-desc01.active{
+  /* display: none; */
+  opacity: 0;
+}
+/* btn 컬러 변경 */
+.efficacy-btn-pre.active{
+  background-color: #000;
+}
+.efficacy-btn-next.on{
+  background-color: #000;
+}
+
+.efficacy-desc h3 {
+}
+.efficacy-desc p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.efficacy-desc p span {
+  display: block;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 300;
+}
+.efficacy-desc button {
+  border: 1px solid #000;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 10px;
+  margin-top: 70px;
+  background-color: #fff;
+}
+/* *efficacy-photo */
+.efficacy-photo {
+  /* position: relative; */
+  /* width: 100%; */
+  /* width: 300px; */
+  /* background-color: green; */
+}
+.efficacy-photo img {
+  width: 100%;
+  display: block;
+}
+/* ! Promise Section05 */
+.promise {
+  background-color: #c3ab8f;
+  padding: 150px 0px;
+}
+.promise-content {}
+.promise-content h2{
+  text-align: center;
+  color: #fff;
+  font-family: 'GmarketSansBold';
+  font-size: 38px;
+  margin-bottom: 50px;
+}
+/* *promise-items 3가지 전체감싸는 박스 */
+.promise-items {
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 70px;
+}
+/* *item*/
+.promise-item {
+  position: relative;
+  text-align: center;
+}
+/* *가상요소로 만든 라인 */
+.promise-item::after {
+  content: "";
+  position: absolute;
+  top: 50%; right: -95px;
+  width: 1px;
+  height: 100px;
+  background-color: #222;
+}
+.promise-item:last-child::after {
+  display: none;
+}
+.promise-item img {
+  width: 100px;
+}
+.promise-item h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.promise-item h3 span {
+  display: block;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 20px 0;
+}
+.promise-item p {
+  color: #fff;
+  font-size: 36px;
+  font-family: 'GmarketSansLight';
+  margin-top: 30px;
+}
+/* ! Footer */
+footer {
+  background-color: #333;
+  color: rgba(238, 238, 238, 0.829);
+  padding: 50px 0;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.footer-logo {
+  display: block;
+  width: 100px;
+}
+.footer-logo img {
+  width: 100%;
+  filter:invert(20%);
+}
+address {
+  font-style: normal;
+}
+address span {
+  display: block;
+  margin-top: 10px;
+}
+.tel {}
+.tel b {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.kakao {
+  display: block;
+  width: 70px;
+}
+.kakao img {
+  width: 100%;
+}
+
+/* ! Gototop */
+.gototop {
+  position: fixed;
+  right: 20px;
+  bottom: -20px; 
+  opacity: 0;
+  border-radius: 50%;
+  width: 50px; height: 50px;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+.gototop img {
+  width: 100%;
+}
+/* *Scroll Effect */
+.gototop.active {
+  bottom: 20px;
+  opacity: 1;
+}
+
+/* ? Slick.js */
+/* ? Customizing CSS */
+/* *Prev, Next Button */
+.pocess-content .slick-prev, 
+.pocess-content .slick-next {
+  z-index: 1;
+  top: 200px;
+  /* border: 1px solid #222; */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.pocess-content .slick-prev {
+  left: 300px;
+}
+.pocess-content .slick-next {
+  right: 300px;
+}
+.pocess-content .slick-prev:before, 
+.pocess-content .slick-next:before {
+  font-family: fontawesome;
+  color: #222;
+  font-size: 40px;
+}
+.pocess-content .slick-prev:before {
+  content:"\f104";
+}
+.pocess-content .slick-next:before {
+  content:"\f105";
+}
+
+.pocess-content .slick-dots {
+  opacity: 0;
+  bottom: -50px;
+}

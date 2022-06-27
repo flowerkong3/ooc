@@ -1,0 +1,303 @@
+@media (max-width: 768px) {
+  /* ? Common */
+  .inner {
+    width: 100%;
+		padding: 0 20px;
+    /* padding: 25px; */
+  }
+  /* ! Header */
+  nav {
+    /* border: 1px solid #000; */
+    width: 100%;
+    padding: 20px 0;
+  }
+  .nav-menu {
+    /* flex-direction: column; */
+  }
+  nav h1 {
+    /* display: none; */
+    align-self: center;
+    order: 2;
+    text-align: center;
+  }
+  nav h1 a {
+  }
+  nav h1 a img {
+    width: 23%;
+    margin-left: 65px;
+    margin-top: 10px;
+  }
+  .lnb {
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    order: 1;
+    position: absolute;
+    top: 0px;
+    left: -300px;/* TODO:모바일에선 안보이게 */
+    width: 250px;
+    height: 100vh;
+    padding-left: 10px;
+    padding-top: 70px;
+    transition: 0.3s;
+  }
+  .lnb.active {
+    display: block;
+    left: 0px;
+  }
+  .lnb>li {
+    margin-right: 0;
+  }
+  .lnb>li>a {
+    /* border: 1px solid #000; */
+    /* TODO:user가 클릭하기 편하게 block으로 바꾼후 padding를 준다. */
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    color: #222;
+  }
+  .gnb {
+    order: 3;
+    padding-right: 10px;
+  }
+  /* *Sub-menu */
+  .sub-menu {
+    display: none;
+  }
+  /* *Trigger */
+  .trigger {
+    display: block;
+    position: relative;
+    left: 20px;
+    top: 0;
+    width: 30px;
+    height: 15px;
+  }
+  .trigger span {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+  /* *Scroll Effect */
+  .trigger span.active {
+    background-color: #222;
+  }
+  .trigger span:nth-child(1) {
+    top: 0;
+  }
+  .trigger span:nth-child(2) {
+    top: 50%;
+  }
+  .trigger span:nth-child(3) {
+    top: 100%;
+  }
+  /* *active클래스명 주면 x자 버튼으로 변경 */
+  .trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+    background-color: #222;
+  }
+  .trigger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+    background-color: #222;
+  }
+  /* *Menu 배경 안보이게 */
+  .menu-bg {
+  display: none;
+  }
+  /* ! Main */
+  main {
+    background-color: green;
+    background: url(../images/main_banner01-pc.jpg)no-repeat;
+    /* background-color: red; */
+    background-position-x: 75%;
+    background-size: cover;
+    /* height: 90vh; */
+  }
+  .main-banner-slider {
+    display: none;
+  }
+  .main-logo-mobile {
+    height: 100vh;
+    display: block; /* 보이게 */
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    /* padding-top: 350px; */
+  }
+  .main-logo-mobile img {
+    width: 80%;
+  }
+  /* ! About Section Section02 */
+  .about {
+    padding: 120px 0px;
+  }
+  .about-heading {
+    padding: 0;
+  }
+  .about-heading h2 {
+  }
+  .about-heading h2 img {
+    width: 70%;
+  }
+  .about-heading h3 {
+    margin-top: 30px;
+    font-size: 36px;
+/*    padding: 0 40px;*/
+    line-height: 1.1em;
+    letter-spacing: -1px;
+  }
+  .about-heading h3 span {
+    display: block;
+    /* ooc 텍스트 아래로 내리는 용도 */
+  }
+  .about-heading h3 span b {
+    font-size: 42px;
+    letter-spacing: -5px;
+  }
+  .about-heading p {
+    margin-top: 25px;
+    padding: 0 20px;
+    font-size: 16px;
+  }
+  /* ! Product-bg Section03  */
+  .product-bg {
+    height: 70vh;
+    background-attachment:scroll;
+    background-position-x: 54%;
+  }
+  /* ! Product-buy Section04 */
+  .product-buy {
+  }
+  .product-buy-inner {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+    width: 100%;
+  }
+  .buy-photo {
+  }
+  .buy-heading {
+    /* width: 100%; */
+    padding: 0;
+    margin-top: 20px;
+  }
+  .buy-heading h3 {
+    text-align: center;
+    line-height: 1.2em;
+  }
+  /* *구매하기 btn */
+  .buy-heading a {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+  }
+  /* ! Brand-direct Section05 */
+  .brand-direct-heading {
+    padding: 150px 0px;
+  }
+  .brand-direct-heading h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  /* *Brand 바로가기 btn */
+.brand-direct-heading a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-left: 0;
+  margin: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.brand-direct-heading a img {
+  display: none;
+  padding: 0 10px;
+}
+.brand-direct-heading a:hover img {
+  margin-left: 0px;
+}
+  /* ! Feature Section06 */
+  .feature-content {
+    flex-direction: column;
+    padding: 100px 0;
+  }
+  .items {
+    margin-bottom: 50px;
+  }
+  .items:last-child {
+    margin-bottom: 0;
+  }
+  /* *Down-desc텍스트 */
+.down-desc h3 {
+  margin: 20px 0;
+}
+  /* ! Instagram Section07 */
+  .instagram {
+    padding: 100px 30px;
+    /* background-color: #fff; */
+  }
+  .instagram-content {
+    flex-direction: column;
+    padding: 0;
+  }
+  .instagram-items h3 {
+    margin-top: 0px;
+  }
+  .instagram-items:nth-child(2) h3 .fa-heart,
+  .instagram-items:nth-child(3) h3 .fa-heart
+  {
+    display: none;
+    /* color: rgba(220, 20, 60, 0.808); */
+  }
+  /* *이미지 */
+  .photo {
+    width: 250px;
+    height: 380px;
+    margin: auto;
+    /* width: 100%;  */
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+  }
+  .photo-image {
+    /* width: 100%; */
+    height: 380px;
+  }
+
+  /* ! Footer */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-logo {
+   margin: auto;
+  }
+  address {
+    font-size: 13px;
+    margin: 30px 0;
+  }
+  .tel {
+    margin-bottom: 50px;
+  }
+  .kakao {
+    margin: auto;
+  }
+
+  /* ? Slick.js */
+  /* ? Customizing CSS */
+  button.slick-arrow,
+  ul.slick-dots {
+    display: none !important;
+  }
+
+}

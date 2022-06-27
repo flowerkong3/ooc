@@ -1,0 +1,56 @@
+@media (max-width: 768px) {
+  /* ! Main */
+  .event-main {
+    height: 100%;
+  }
+  .event-content {
+    width: 100%;
+    padding: 0;
+  }
+  .event-heading {
+    /* height: 80vh; */
+  }
+  .event-heading img {
+    margin-top: 200px;
+    width: 250px;
+  }
+  .event-heading h2 {
+    margin-top: 30px;
+    font-size: 40px;
+    line-height: .7em;
+  }
+  .event-heading h2 span {
+    margin-top: 20px;
+    padding: 0 30px;
+  }
+  /* *event-items */
+  .event-item {
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    /* padding: 50px 0; */
+  }
+  .event-item {
+    padding: 0;
+  }
+  /* *구매 btn */
+.dsec a {
+  margin-top: 30px;
+}
+  /* *이벤트 이미지 */
+  .photo {
+    width: 100%;
+    box-shadow: 0 0 0 #fff;
+  }
+  .photo.event1{
+    width: 100%;
+    margin: 0px;
+  }
+  .photo.event1 img {
+    margin: auto;
+    width: 70%;
+  }
+  
+}
