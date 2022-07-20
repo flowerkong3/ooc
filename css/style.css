@@ -779,13 +779,14 @@ button.slick-arrow {
 	z-index: 1;
 	display: block !important;
 	border: 1px solid #5d6b50;
-	width: 70px;
-	height: 70px;
+	width: 60px;
+	height: 60px;
 	border-radius: 50%;
 }
 
 .slick-arrow:hover {
-	background-color: rgba(255, 255, 255, 0.438);
+	background-color: rgba(255, 255, 255, 0.7);
+	transition: all 0.3s;
 }
 
 .slick-prev {
@@ -1164,6 +1165,7 @@ ul.slick-dots {
 		width: 150px;
 		height: 150px
 	}
+	.up-image span {font-size:24px;}
 
 	.items {
 		display: flex;
