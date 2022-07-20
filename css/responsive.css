@@ -118,7 +118,7 @@
     /* background-color: red; */
     background-position-x: 75%;
     background-size: cover;
-    /* height: 90vh; */
+    height: 90vh;
   }
   .main-banner-slider {
     display: none;
@@ -133,7 +133,8 @@
     /* padding-top: 350px; */
   }
   .main-logo-mobile img {
-    width: 80%;
+		max-width: 500px; width: 100%;
+    padding: 0 30px;
   }
   /* ! About Section Section02 */
   .about {
