@@ -26,7 +26,11 @@ $(function(){
     }
     else {
       $('header, .gototop, .trigger>span, .sub-menu').removeClass('active');
-    }
+    };
+
+
+
+
   });
 
 
@@ -79,6 +83,23 @@ $(function(){
   });
 
 
-
+	// 스크롤 애니메이션
+	$(window).scroll(function(){
+		fnScrollfade();
+	});
+	function fnScrollfade(){
+		$('.scroll-fade, .items, .delay').each( function(i){
+			var bottomObject = $(this).offset().top;
+			var bottomWindow = $(window).scrollTop() + $(window).height() / 1;
+			
+			if( bottomWindow >= bottomObject ){
+				$(this).addClass('fade-in-up');
+			}else {
+				$(this).removeClass('fade-in-up');
+			}
+		});
+	};
+	
+	
 
 });
