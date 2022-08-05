@@ -165,7 +165,7 @@ nav h1 {flex: 2;}
 .gnb a img {width: 100%;}
 
 /* *Sub-menu */
-.sub-menu {overflow: hidden; position: absolute; top: 60px; height: 0px; transition: 0.5s;}
+.sub-menu {overflow: hidden; position: absolute; top: 69px; height: 0px; transition: 0.5s;}
 .sub-menu li {width: 100px; line-height: 1.8em;}
 .sub-menu li a {padding: 10px 0; font-size: 14px;	color: #fff;}
 .sub-menu li a:hover {color: rgb(224, 224, 224);}
@@ -174,7 +174,7 @@ nav h1 {flex: 2;}
 .trigger {display: none;}
 
 /* *Menu 배경보이게 */
-.menu-bg {z-index: -1; position: absolute; top: 100px; width: 100%; height: 0px; background-color: rgba(0, 0, 0, 0.4);	transition: 0.5s;}
+.menu-bg {z-index: -1; position: absolute; top: 115px; width: 100%; height: 0px; background-color: rgba(0, 0, 0, 0.7);	transition: 0.5s;}
 
 /* *jQuery Hover Effect */
 /* active 클래스명을 가지면 sub-menu 보이게 */
@@ -183,12 +183,15 @@ nav h1 {flex: 2;}
 /* 메뉴 배경색 보이게 */
 .menu-bg.active {height: 130px;}
 
+/* .sub-menu {overflow: auto; border:1px solid #000; height:100px;}
+.menu-bg {border:1px solid #000; height:100px;} */
+
 /* ! Main */
 .main-banner-slider div {outline: none;}
 .main-banner-slider div img {display: block; width: 100%;}
 .main-logo-mobile {display: none;}
 
-/* ! Section 시작 */
+
 /* ! About Section Section02 */
 .about-heading {text-align: center; padding: 0 0 30px;}
 .about-heading h2 {margin: auto; width: 100px;}
@@ -243,7 +246,7 @@ nav h1 {flex: 2;}
 .brand-direct-heading a:hover {}
 
 /* ! Feature Section06 */
-.feature {display: flex; justify-content: center; align-items: center; height: 70vh; }
+.feature {display: flex; justify-content: center; align-items: center;}
 .feature-content {display: flex; justify-content: center;}
 
 /* *items */
@@ -258,8 +261,9 @@ nav h1 {flex: 2;}
 .up-image img {width: 100%;}
 
 /* *Down-desc텍스트 */
-.down-desc h3 {margin: 20px 0; font-weight: 500; font-size: 20px;}
-.down-desc p {line-height: 1.7em;}
+.down-desc  {margin-left:5%;}
+.down-desc h3 {margin:14px 0; font-weight: 500; font-size:18px;}
+.down-desc p {line-height: 1.7em; font-size:13px;}
 
 /* ! Instagram Section07 */
 .instagram {padding: 150px 0px; background-color: rgb(220, 231, 194);}
@@ -281,7 +285,7 @@ nav h1 {flex: 2;}
 
 
 /* ! Footer */
-footer {padding: 50px 0; background-color: #222; color: rgba(238, 238, 238, 0.829); font-size: 13px;}
+footer {padding: 30px 0; background-color: #222; color: rgba(238, 238, 238, 0.829); font-size: 13px;}
 .footer-content {display: flex; justify-content: space-between; padding: 0 20px;}
 .footer-logo {display: block; width: 100px;}
 .footer-logo img {width: 100%; filter: invert(20%);}
@@ -320,18 +324,34 @@ ul.slick-dots {bottom: 30px;}
 
 
 
+/* ========= 팝업 =========== */
+.pop-section {z-index: 999; position: fixed; background: rgba(0,0,0,0.5); padding:10px; width: 100%; height: 100%; top: 0; left: 0;}
+.pop-wrap {position:relative; top: 50%; left: 50%; max-width: 350px; height:435px; transform: translate(-50%, -50%);}
+.pop-wrap .content {height:100%}
+.pop-wrap .content img {width:100%}
+.pop-wrap .btn-wrap {position:relative; bottom:0; right:0px; height:40px; width:100%; background:#fff;}
+.pop-wrap .btn {position:absolute; top: 50%; transform: translateY(-50%); border: none; background: transparent; }
+.btn--close {right:10px; font-size:0;}
+.btn--today {right:50px;}
+
+
+
+
+/* ===================== 1300px ====================== */
+
 @media screen and (max-width: 1300px) {
 	section {padding: 100px}
 	.inner {width: 100%;}
+	.product-buy {padding: 40px 0;}
 	.brand-direct {padding: 50px 0}
 	.brand-direct-heading {padding: 150px 0}
 	.brand-direct-heading h2 {font-size: 40px;}
 	.up-image {	width: 150px; height: 150px;}
-	.footer-content address {margin:0 10px; width:400px;}
+	.footer-content address {margin:0 10px; }
 	.footer-content .tel {margin:0 10px}
 }
 
-
+/* ===================== 768px ====================== */
 
 @media screen and (max-width: 768px) {
 	/* ? Common */
@@ -382,22 +402,25 @@ ul.slick-dots {bottom: 30px;}
 	.about-heading h3 {margin-top: 30px; font-size: 36px; line-height: 1.1em; letter-spacing: -1px;	}
 	.about-heading h3 span {display: block;}
 	.about-heading h3 span b {font-size: 42px; letter-spacing: -5px;}
-	.about-heading p {margin-top: 25px; padding: 0 20px; font-size: 16px;}
+	.about-heading p {margin-top: 25px; padding: 0 20px; font-size: 14px;}
 
 	/* ! Product-bg Section03  */
 	.product-bg {height: 70vh; background-attachment: scroll; background-position-x: 54%;}
 
 	/* ! Product-buy Section04 */
+	
 	.product-buy-inner {flex-direction: column; padding: 0 20px; width: 100%;}
-	.buy-heading {padding: 0; margin-top: 20px;}
-	.buy-heading h3 {text-align: center; line-height: 1.2em; font-size: 28px;}
-
 	/* *구매하기 btn */
-	.buy-heading a {display: block; text-align: center; margin-top: 20px; padding: 10px; width: 100%; font-size: 18px;}
+	.buy-heading {padding: 0; margin-top: 20px;}
+	.buy-heading h3 {text-align: center; line-height: 1.2em; font-size:24px;}
+
+	.buy-heading h3 br {display:none;}
+	.buy-heading a {display: block; text-align: center; margin-top: 20px; padding: 10px; width: 100%; font-size:14px;}
 
 	/* ! Brand-direct Section05 */
+	.brand-direct {padding:50px 20px}
 	.brand-direct-heading {padding: 150px 0px;}
-	.brand-direct-heading h2 {font-size: 32px; margin-bottom: 30px;}
+	.brand-direct-heading h2 {font-size:24px; margin-bottom: 30px;}
 
 	/* *Brand 바로가기 btn */
 	.brand-direct-heading a {display: flex; justify-content: center; align-items: center; margin-left: 0; padding: 10px; margin: auto; width: 100%; box-sizing: border-box;}
@@ -405,21 +428,18 @@ ul.slick-dots {bottom: 30px;}
 	.brand-direct-heading a:hover img {margin-left: 0px;}
 
 	/* ! Feature Section06 */
-	.feature-content {flex-direction: column;}
-	.items {margin-bottom: 50px;}
-	.items:last-child {margin-bottom: 0;}
-
-	/* *Down-desc텍스트 */
-	.down-desc h3 {margin: 20px 0;}
-	.feature-content {flex-direction: column;}
+	.feature {padding:50px 20px}
+	.feature-content {flex-direction: column; padding-left:9%;}
 	.feature-content li:first-child {margin-top: 0;}
+	.items {display: flex; margin-bottom: 50px; margin: 20px auto 0; max-width: 500px; width: 100%;}
+	.items:last-child {margin-bottom: 0;}
 	.up-image {width: 150px; height: 150px}
 	.up-image span {font-size:24px;}
-	.items {display: flex; margin-bottom: 50px; margin: 20px auto 0; max-width: 500px; width: 100%;}
-	.down-desc {flex: 2; text-align: left; margin-left: 10%; max-width: 300px; width: 100%}
+	.down-desc {flex: 2; text-align: left; margin-left:5%; max-width: 300px; width: 100%}
+	.down-desc h3 {margin: 20px 0;}
 
 	/* ! Instagram Section07 */
-	.instagram {padding: 100px 30px; margin-bottom: -3%;}
+	.instagram {padding: 50px 0; margin-bottom: -3%;}
 	.instagram-content {flex-direction: column; padding: 0;}
 	.instagram-items h3 {margin-top: 0px;}
 	.instagram-items:nth-child(2) h3 .fa-heart,
@@ -437,9 +457,9 @@ ul.slick-dots {bottom: 30px;}
 	/* ! Footer */
 	.footer-content {flex-direction: column; text-align: center;}
 	.footer-logo {margin: auto;}
-	.footer-content address {font-size: 13px; margin: 30px auto;}
+	.footer-content address {font-size:12px; margin: 30px auto; width:100%;}
 	.tel {margin-bottom: 50px;}
-	.kakao {margin: auto;}
+	.kakao {margin: 30px auto 0;}
 
 	/* ? Slick.js */
 	/* ? Customizing CSS */
