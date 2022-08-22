@@ -100,6 +100,17 @@ $(function(){
 		});
 	};
 	
+
+
+	/* Use - Video - Modal */
+	$('.use-video i').click(function(){
+		$('.use-video-modal').fadeIn();
+		$('body').addClass('active');
+	});
+	$('.use-video-modal i').click(function(){
+		$('.use-video-modal').fadeOut();
+		$('body').removeClass('active');
+	});
 	
 
 });
