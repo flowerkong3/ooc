@@ -326,10 +326,10 @@ ul.slick-dots {bottom: 30px;}
 
 /* ========= 팝업 =========== */
 .pop-section {z-index: 999; position: fixed; background: rgba(0,0,0,0.5); padding:10px; width: 100%; height: 100%; top: 0; left: 0;}
-.pop-wrap {position:relative; top: 50%; left: 50%; max-width: 350px; height:435px; transform: translate(-50%, -50%);}
+.pop-wrap {position:relative; top: 50%; left: 50%; max-width: 350px; height:auto; transform: translate(-50%, -50%);}
 .pop-wrap .content {height:100%}
 .pop-wrap .content img {width:100%}
-.pop-wrap .btn-wrap {position:relative; bottom:0; right:0px; height:40px; width:100%; background:#fff;}
+.pop-wrap .btn-wrap {position:relative; bottom:7px; right:0px; height:40px; width:100%; background:#fff;}
 .pop-wrap .btn {position:absolute; top: 50%; transform: translateY(-50%); border: none; background: transparent; }
 .btn--close {right:10px; font-size:0;}
 .btn--today {right:50px;}
