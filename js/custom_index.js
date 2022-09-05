@@ -1,4 +1,11 @@
 $(function(){
+
+  // ! Trigger
+  $('.trigger').click(function(){
+    $(this).toggleClass('active');
+    $('.lnb').toggleClass('active')
+  });
+
   // ! 2단 Menu
   $('.lnb>li').mouseenter(function(){
     // $('.lnb>li')
@@ -13,11 +20,7 @@ $(function(){
     $('.menu-bg').removeClass('active');
   });
 
-  // ! Trigger
-  $('.trigger').click(function(){
-    $(this).toggleClass('active');
-    $('.lnb').toggleClass('active')
-  });
+
 
   // ! Header Scroll Change
   $(window).scroll(function(){
