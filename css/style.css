@@ -429,7 +429,7 @@ ul.slick-dots {bottom: 30px;}
 
 	/* ! Feature Section06 */
 	.feature {padding:50px 20px}
-	.feature-content {flex-direction: column; padding-left:9%;}
+	.feature-content {flex-direction: column; padding-left:0;}
 	.feature-content li:first-child {margin-top: 0;}
 	.items {display: flex; margin-bottom: 50px; margin: 20px auto 0; max-width: 500px; width: 100%;}
 	.items:last-child {margin-bottom: 0;}

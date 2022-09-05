@@ -85,7 +85,7 @@
 	          </div>
 	          <div class="buy-heading">
 	            <h3><span>자연에서 찾은</span>&nbsp;<br>올리브 오일 클렌져</h3>
-	            <a href="#none">구매하기</a>
+	            <a href="sub_product.html">구매하기</a>
 	          </div>
 	          <!-- * 배경 img로 넣는 방법 -->
 	          <!-- <div class="buy-bg">
@@ -221,7 +221,7 @@
 
 
 	<!-- ================팝업 ================ -->
-	<section class="pop-section">
+	<section class="pop-section" id="popupSection">
 		<div class="pop-wrap">
 			<a href="https://flowerkong3.github.io/ooc/sub_brand.html" target="_blank">
 				<div class="content">
@@ -239,25 +239,36 @@
 		</div>
 		</div>
 	</section>
+
 	<script>
-		const popSection = document.querySelector('.pop-section');
-		function popClose(){
-			// 팝업창 닫기.
-			popSection.style.display = 'none';
+	
+		// 팝업 쿠키 설정
+		$( document ).ready(function() {
+			cookiedata = document.cookie; 
 
-			return false;
+			if ( cookiedata.indexOf("ncookie=done") < 0 ){ 
+				document.getElementById('popupSection').style.display = "block";    //  팝업창 아이디
+			} else {
+				document.getElementById('popupSection').style.display = "none";    // 팝업창 아이디
+			}
+		});
 
-			//만약 체크박스에 체크하고 닫기 버튼 누르면 오늘하루 보지 않기.
+		function setCookie( name, value, expiredays ) { 
+			var todayDate = new Date(); 
+			todayDate.setDate( todayDate.getDate() + expiredays );
+			document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+		}
+		//닫기
+		function popClose() { 
+			document.getElementById('popupSection').style.display = "none";    // 팝업창 아이디
+		}
+		//오늘 하루 닫기
+		function popToday() { 
+			setCookie( "ncookie", "done" , 7 );     // 저장될 쿠키명 , 쿠키 value값 , 기간( ex. 1은 하루, 7은 일주일)
+			document.getElementById('popupSection').style.display = "none";    // 팝업창 아이디
 		}
 
-		
 
-		// function popClose(){
-		// 	$('.pop-section').hide();
-		// }
-		// function popToday(){
-
-		// }
 	</script>
 	<!-- // ================팝업 ================ -->
 
