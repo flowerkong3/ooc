@@ -1,3 +1,5 @@
+
+
 $(function(){
 
   // ! Trigger
@@ -22,7 +24,8 @@ $(function(){
 
 
 
-  // ! Header Scroll Change
+
+ 	// ! Header Scroll Change
   $(window).scroll(function(){
     if($(window).scrollTop() > 50){
       $('header, .gototop, .trigger>span, .sub-menu').addClass('active');
@@ -30,10 +33,6 @@ $(function(){
     else {
       $('header, .gototop, .trigger>span, .sub-menu').removeClass('active');
     };
-
-
-
-
   });
 
 
@@ -84,6 +83,9 @@ $(function(){
     $.scrollTo(this.hash || 0, 800);
     e.preventDefalut();
   });
+
+
+
 
 
 	// 스크롤 애니메이션

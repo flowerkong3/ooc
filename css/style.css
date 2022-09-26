@@ -150,6 +150,7 @@ header.active .gnb a {
 header.active .lnb li a {color: #222;}
 header.active .sub-menu li a {color: #fff;}
 header.active .sub-menu li a:hover {color: #ccc;}
+.header.active {background: #fefefe;}
 
 /* *nav */
 nav {width: 1280px; display: flex; justify-content: space-between; align-items: center; padding: 30px 20px; margin: auto;}
@@ -250,7 +251,7 @@ nav h1 {flex: 2;}
 .feature-content {display: flex; justify-content: center;}
 
 /* *items */
-.items {padding: 0 20px; text-align: center;}
+.items {padding: 0 30px; text-align: center;}
 
 /* *Up-image 이미지 */
 .up-image {overflow: hidden; margin: auto; position: relative; top: 0; width: 200px; height: 200px; border-radius: 50%; transition: 0.3s;}
@@ -261,7 +262,7 @@ nav h1 {flex: 2;}
 .up-image img {width: 100%;}
 
 /* *Down-desc텍스트 */
-.down-desc  {margin-left:5%;}
+/* .down-desc  {margin-left:5%;} */
 .down-desc h3 {margin:14px 0; font-weight: 500; font-size:18px;}
 .down-desc p {line-height: 1.7em; font-size:13px;}
 
@@ -349,6 +350,7 @@ ul.slick-dots {bottom: 30px;}
 	.up-image {	width: 150px; height: 150px;}
 	.footer-content address {margin:0 10px; }
 	.footer-content .tel {margin:0 10px}
+	.items {padding: 0 16px;}
 }
 
 /* ===================== 768px ====================== */
@@ -356,6 +358,8 @@ ul.slick-dots {bottom: 30px;}
 @media screen and (max-width: 768px) {
 	/* ? Common */
 	.inner {width: 100%; padding: 0 20px;}
+
+
 
 	/* ! Header */
 	nav {width: 100%; padding: 20px 0;}

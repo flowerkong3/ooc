@@ -24,12 +24,15 @@
   <div class="container">
 
 		<!-- ! Gototop -->
-		<a class="gototop" href="#">
+		<a class="gototop" href="#" onclick="topBtn()">
 			<img src="images/btn_top.png" alt="top">
 		</a>
 
+
     <!-- ! Header -->
-		<header>
+		<header class="header">
+	
+
 			<div w3-include-html="header.html">
 				 <script>includeHTML();</script>
 			</div>
@@ -267,7 +270,6 @@
 			setCookie( "OOCcookie", "event" , 7 );     // 저장될 쿠키명 , 쿠키 value값 , 기간( ex. 1은 하루, 7은 일주일)
 			document.getElementById('popupSection').style.display = "none";    // 팝업창 아이디
 		}
-
 
 	</script>
 	<!-- // ================팝업 ================ -->
